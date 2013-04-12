@@ -39,7 +39,7 @@ Proxy Module using mod_mruby.
         "http://192.168.0.104:8888/",
     ]
     
-    # �����դ˿������������줿�ꡢbackends���󤫤������Ф��롼�����������������ꤹ����mod_mruby�Τ��ޤߤ��Ǥ롩
+    # この辺に色々条件を入れたり、backends配列から取り出すルールを別途定義したりするとmod_mrubyのうまみがでる？
     
     r = Apache::Request.new
     
