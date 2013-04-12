@@ -29,7 +29,7 @@ Proxy Module using mod_mruby.
     </IfModule>
     ```
 
-    - Change /path/to/proxy_by_scboard.rb for you
+- Change /path/to/proxy_by_scboard.rb for you
 
     ```ruby
     backends = [
