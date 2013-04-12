@@ -20,11 +20,13 @@ Proxy Module using mod_mruby.
 - Change mod_mruby_proxy.conf for you
 
     ```apache
-    # simple proxy module
-    mrubyTranslateNameFirst /path/to/proxy.rb
-
-    # proxy modul by scoreboard information
-    #mrubyTranslateNameFirst /path/to/proxy_by_scboard.rb
+    <IfModule mruby_module>
+      # simple proxy module
+      mrubyTranslateNameFirst /path/to/proxy.rb
+      
+      # proxy modul by scoreboard information
+      #mrubyTranslateNameFirst /path/to/proxy_by_scboard.rb
+    </IfModule>
     ```
 
     - Change /path/to/proxy_by_scboard.rb for you
@@ -37,7 +39,7 @@ Proxy Module using mod_mruby.
         "http://192.168.0.104:8888/",
     ]
     
-    # ¤³¤ÎÊÕ¤Ë¿§¡¹¾ò·ï¤òÆþ¤ì¤¿¤ê¡¢backendsÇÛÎó¤«¤é¼è¤ê½Ð¤¹¥ë¡¼¥ë¤òÊÌÅÓÄêµÁ¤·¤¿¤ê¤¹¤ë¤Èmod_mruby¤Î¤¦¤Þ¤ß¤¬¤Ç¤ë¡©
+    # ï¿½ï¿½ï¿½ï¿½ï¿½Õ¤Ë¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì¤¿ï¿½ê¡¢backendsï¿½ï¿½ï¿½ó¤«¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¤ï¿½ï¿½ë¡¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê¤¹ï¿½ï¿½ï¿½ï¿½mod_mrubyï¿½Î¤ï¿½ï¿½Þ¤ß¤ï¿½ï¿½Ç¤ë¡©
     
     r = Apache::Request.new
     
